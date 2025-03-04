@@ -28,33 +28,27 @@ print(type(T))
 theta_1, theta_2, theta_3, theta_4, theta_5, theta_6 = sp.symbols('theta_1, theta_2, theta_3, theta_4, theta_5, theta_6')
 
 #Tabla DH
-#K T01 = T.subs({d: 0.4, a: 0.025, alpha: sp.pi/2})
-T01 = T.subs({d: 0.78, a: 0.35, alpha: sp.pi/2})
+T01 = T.subs({d: 0.4, a: 0.025, alpha: sp.pi/2})
 T01 = T01.subs({theta: theta_1})
 #sp.pprint(T01)
 
-#K T12 = T.subs({d: 0, a: 0.315, alpha: 0})
-T12 = T.subs({d: 0, a: 1.145, alpha: 0})
+T12 = T.subs({d: 0, a: 0.315, alpha: 0})
 T12 = T12.subs({theta: theta_2}) #theta_2 + sp.pi/2
 #sp.pprint(T12)
 
-#K T23 = T.subs({d: 0, a:0.035, alpha: sp.pi/2})
-T23 = T.subs({d: 0, a:0.2, alpha: sp.pi/2})
+T23 = T.subs({d: 0, a:0.035, alpha: sp.pi/2})
 T23 = T23.subs({theta: theta_3})
 #sp.pprint(T23)
 
-#K T34 = T.subs({d: 0.365, a: 0, alpha: -sp.pi/2})
-T34 = T.subs({d: 1.2125, a: 0, alpha: -sp.pi/2})
+T34 = T.subs({d: 0.365, a: 0, alpha: -sp.pi/2})
 T34 = T34.subs({theta: theta_4})
 #sp.pprint(T34)
 
-#K T45 = T.subs({d: 0, a: 0, alpha: sp.pi/2})
 T45 = T.subs({d: 0, a: 0, alpha: sp.pi/2})
 T45 = T45.subs({theta: theta_5})
 #sp.pprint(T45)
 
-#K T56 = T.subs({d: 0.08, a: 0, alpha: 0})
-T56 = T.subs({d: 0.22, a: 0, alpha: 0})
+T56 = T.subs({d: 0.08, a: 0, alpha: 0})
 T56 = T56.subs({theta: theta_6})
 #sp.pprint(T56)
 
